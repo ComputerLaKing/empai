@@ -15,7 +15,7 @@ An AI-powered companion designed to provide emotional support and understanding 
 
 ## Demo
 
-🔗 **[Try the Live Demo](your-streamlit-app-url-here)**
+🔗 **[Try the Live Demo](https://empaai.streamlit.app/)**
 
 ## Setup Instructions
 
