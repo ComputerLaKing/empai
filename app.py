@@ -201,6 +201,7 @@ def get_empathetic_system_prompt(mood):
 - Curious about their experience in a caring way
 - Brief enough to feel like natural conversation
 - Free of excessive enthusiasm or clinical language
+- Short and understanding, sound like human
 
 Keep responses concise (2-4 sentences typically) unless the person specifically needs more detailed support."""
     
