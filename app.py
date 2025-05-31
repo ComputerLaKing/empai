@@ -298,8 +298,15 @@ def main():
         key="user_input",
         label_visibility="collapsed"
     )
+
+    # Use a form to capture Enter key press
+    with st.form(key="chat_form", clear_on_submit=True):
+        # Create invisible submit button that gets triggered by Enter
+        submit_with_enter = st.form_submit_button("Send", type="primary", use_container_width=False)
+
     
     col1, col2, col3 = st.columns([1, 1, 3])
+
     
     with col1:
         send_clicked = st.button("Send", type="primary")
