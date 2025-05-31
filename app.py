@@ -1,4 +1,4 @@
-import streamlit as st
+aiimport streamlit as st
 import requests
 import json
 from datetime import datetime
@@ -6,7 +6,7 @@ import re
 
 # Configure page
 st.set_page_config(
-    page_title="AI Companion",
+    page_title="Empaai",
     page_icon="🌸",
     layout="centered",
     initial_sidebar_state="collapsed"
@@ -263,8 +263,8 @@ def main():
     # Simple, clean header
     st.markdown("""
     <div class="main-header">
-        <div class="main-title">🌸 Companion</div>
-        <div class="main-subtitle">A quiet space for conversation</div>
+        <div class="main-title">🌸 Empaai</div>
+        <div class="main-subtitle">A space for conversation</div>
     </div>
     """, unsafe_allow_html=True)
     
