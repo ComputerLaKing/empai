@@ -296,7 +296,7 @@ def main():
     with st.form(key="chat_form", clear_on_submit=True):
         user_input = st.text_area(
             label="",
-            placeholder="What's on your mind? (Press Enter to send)",
+            placeholder="What's on your mind? (Press Ctrl + Enter to send)",
             height=80,
             key="user_input",
             label_visibility="collapsed"
