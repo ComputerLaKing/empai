@@ -265,7 +265,7 @@ def main():
     st.markdown("""
     <div class="main-header">
         <div class="main-title">🌸 HeartTalk </div>
-        <div class="main-subtitle">Chat with Empaai, who has all ears you</div>
+        <div class="main-subtitle">Chat with Empaai, all ears for you</div>
     </div>
     """, unsafe_allow_html=True)
     
