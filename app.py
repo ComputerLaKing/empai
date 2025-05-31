@@ -3,6 +3,7 @@ import requests
 import json
 from datetime import datetime
 import re
+import html
 
 # Configure page
 st.set_page_config(
