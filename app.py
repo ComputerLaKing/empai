@@ -7,7 +7,7 @@ import html
 
 # Configure page
 st.set_page_config(
-    page_title="Empaai",
+    page_title="HeartTalk",
     page_icon="🌸",
     layout="centered",
     initial_sidebar_state="collapsed"
@@ -264,8 +264,8 @@ def main():
     # Simple, clean header
     st.markdown("""
     <div class="main-header">
-        <div class="main-title">🌸 Empaai</div>
-        <div class="main-subtitle">A space for conversation</div>
+        <div class="main-title">🌸 HeartTalk </div>
+        <div class="main-subtitle">Chat with Empaai, who has all ears you</div>
     </div>
     """, unsafe_allow_html=True)
     
