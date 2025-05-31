@@ -269,28 +269,33 @@ def main():
     """, unsafe_allow_html=True)
     
     # Display conversation history
-    if st.session_state.messages:
-        st.markdown('<div class="chat-container">', unsafe_allow_html=True)
-        for message in st.session_state.messages:
-            if message["role"] == "user":
-                st.markdown(f"""
-                <div class="chat-message user-message">
-                    {message["content"]}
-                    <div class="timestamp">{message.get("timestamp", "")}</div>
-                </div>
-                """, unsafe_allow_html=True)
-            else:
-                st.markdown(f"""
-                <div class="chat-message ai-message">
-                    {message["content"]}
-                    <div class="timestamp">{message.get("timestamp", "")}</div>
-                </div>
-                """, unsafe_allow_html=True)
-        st.markdown('</div>', unsafe_allow_html=True)
-    
-    # Input area
-    # Input area
-st.markdown('<div class="input-container">', unsafe_allow_html=True)
+    import html
+
+# Display conversation history
+if st.session_state.messages:
+    st.markdown('<div class="chat-container">', unsafe_allow_html=True)
+    for message in st.session_state.messages:
+        # Escape HTML in the message content to prevent issues
+        safe_content = html.escape(message["content"])
+        timestamp = message.get("timestamp", "")
+        
+        if message["role"] == "user":
+            message_html = f"""
+            <div class="chat-message user-message">
+                {safe_content}
+                <div class="timestamp">{timestamp}</div>
+            </div>
+            """
+        else:
+            message_html = f"""
+            <div class="chat-message ai-message">
+                {safe_content}
+                <div class="timestamp">{timestamp}</div>
+            </div>
+            """
+        
+        st.markdown(message_html, unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
 
 # Use form to capture both button clicks and Enter key
 with st.form(key="chat_form", clear_on_submit=True):
