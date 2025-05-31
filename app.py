@@ -277,7 +277,6 @@ def main():
                 st.markdown(f"""
                 <div class="chat-message user-message">
                     {message["content"]}
-                    <div class="timestamp">{message.get("timestamp", "")}</div>
                 </div>
                 """, unsafe_allow_html=True)
             else:
